@@ -13,6 +13,9 @@ img_path_1 = "pdf_bild_test.jpg"
 img_path_2 = "pdf_bild_test.png"
 img_path_3 = "fallnummer_test.png"
 img_path_4 = "fallnummer_test2.png"
+img_path_5 = "fallnummer_test3.png"
+
+numbers = "0123456789"
 
 # turns the picture into a string
 def picturetotext(path):
@@ -32,8 +35,14 @@ def extractfnr(text):
     while count != 0:
         # extract Fallnummer
         beg = text.find("00", start, end)
-        nr = text[beg:beg + 10]
-        nrs[index] = nr
+        endspace = text.find(" ", beg, end)
+        endnewline = text.find("\n", beg, end)
+        endfn = min(endspace, endnewline)
+        nr = text[beg:endfn]
+        if nr.isnumeric() and len(nr) == 10:
+            nrs[index] = nr
+        else:
+            nrs.remove(nrs[-1])
 
         count = count - 1
         index = index + 1
@@ -42,12 +51,12 @@ def extractfnr(text):
     return nrs
 
 
-
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    text = picturetotext(img_path_4)
-    fnr = extractfnr(text)
-    print(fnr)
+    text = picturetotext(img_path_5)
+    fnrs = extractfnr(text)
+    print(fnrs)
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
