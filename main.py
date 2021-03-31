@@ -10,11 +10,11 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Users\felix.kerkmann\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
-img_path_1 = "pdf_bild_test.jpg"
-img_path_2 = "pdf_bild_test.png"
-img_path_3 = "fallnummer_test.png"
-img_path_4 = "fallnummer_test2.png"
-img_path_5 = "fallnummer_test3.png"
+img_path_1 = "resources/pdf_bild_test.jpg"
+img_path_2 = "resources/pdf_bild_test.png"
+img_path_3 = "resources/fallnummer_test.png"
+img_path_4 = "resources/fallnummer_test2.png"
+img_path_5 = "resources/fallnummer_test3.png"
 
 numbers = "0123456789"
 
