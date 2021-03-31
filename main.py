@@ -7,7 +7,8 @@ import cv2
 import pytesseract
 
 # after the installation you have to set the path directly to the executable (Windows)
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\felix.kerkmann\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Users\felix.kerkmann\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 img_path_1 = "pdf_bild_test.jpg"
 img_path_2 = "pdf_bild_test.png"

@@ -1,7 +1,16 @@
 # README
 
-Download cv2 and pytesseract
+## Setup:
 
-you have to set the path to the pytesseract.exe file
+### Use a python virtual environment venv
 
-Used venv to have an isolatet program
+install pytesseract and opencv-python
+
+````commandline
+pip install pytesseract
+pip isntall opencv-python
+````
+if you use windows install an executable tesseract-ocr
+* [https://tesseract-ocr.github.io/tessdoc/Downloads.html](https://tesseract-ocr.github.io/tessdoc/Downloads.html)
+
+set the Path to the executable in `main.py`
